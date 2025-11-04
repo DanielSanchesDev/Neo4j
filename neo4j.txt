@@ -1,0 +1,106 @@
+CREATE (ivanaBaquero:Ator {nome: "Ivana Baquero"})
+CREATE (oLabirintoDoFauno:Filme {titulo: "O Labirinto do Fauno"})
+CREATE (hbomax:Plataforma {nome: "HBOMAX"})
+CREATE (usuario:Usuario {nome: "HBOMAX", plataforma: "NETFLIX"})
+
+CREATE (ivanaBaquero)-[:ATUOU_EM]->(oLabirintoDoFauno)
+CREATE (oLabirintoDoFauno)<-[:DISPONIVEL_EM]-(hbomax)
+CREATE (hbomax)-[:PERTENCE_A]->(:Empresa {nome: "Distribuidora de Streamer"})
+CREATE (usuario)-[:ASSINANTE_DE]->(:Empresa {nome: "Distribuidora de Streamer"})
+
+CREATE (julieAnneRobinson:Produtor {nome: "Julie Anne Robinson"})
+CREATE (outerBanks:Serie {titulo: "Outer Banks"})
+CREATE (ana:Usuario {nome: "Ana"})
+
+CREATE (julieAnneRobinson)<-[:DIRIGIDO_POR]-(outerBanks)
+CREATE (outerBanks)<-[:ASSISTIU]-(ana)
+
+CREATE (oHobbit:Filme {titulo: "O Hobbit"})
+CREATE (daniel:Usuario {nome: "Daniel"})
+
+CREATE (oHobbit)<-[:ASSISTIU]-(daniel)
+
+CREATE (animaisFantasticos:Filme {titulo: "Animais Fantásticos e Onde Habitam"})
+CREATE (rodrigo:Usuario {nome: "Rodrigo"})
+
+CREATE (animaisFantasticos)<-[:ASSISTIU]-(rodrigo)
+
+CREATE (aInvencaoDeHugoCabret:Filme {titulo: "A Invenção de Hugo Cabret"})
+CREATE (martinScorsese:Produtor {nome: "Martin Scorsese"})
+
+CREATE (aInvencaoDeHugoCabret)-[:DIRIGIDO_POR]->(martinScorsese)
+
+CREATE (andre:Usuario {nome: "André"})
+
+CREATE (aInvencaoDeHugoCabret)<-[:ASSISTIU]-(andre)
+
+CREATE (juanAntonioBayona:Produtor {nome: "Juan Antonio Bayona"})
+CREATE (seteMinutosAposMeiaNoite:Filme {titulo: "Sete Minutos Apos Meia Noite"})
+
+CREATE (seteMinutosAposMeiaNoite)-[:DIRIGIDO_POR]->(juanAntonioBayona)
+
+CREATE (ethan:Usuario {nome: "Ethan"})
+
+CREATE (seteMinutosAposMeiaNoite)<-[:ASSISTIU]-(ethan)
+
+CREATE (harryPotter:Filme {titulo: "Harry Potter e o Enigma do Príncipe"})
+CREATE (davidYates:Produtor {nome: "David Yates"})
+
+CREATE (harryPotter)-[:DIRIGIDO_POR]->(davidYates)
+
+CREATE (adriana:Usuario {nome: "Adriana"})
+
+CREATE (harryPotter)<-[:ASSISTIU]-(adriana)
+
+CREATE (bridgerton:Serie {titulo: "Bridgerton"})
+CREATE (monique:Usuario {nome: "MONIQUE"})
+
+CREATE (bridgerton)<-[:ASSISTIU]-(monique)
+
+CREATE (heartstopper:Serie {titulo: "Heartstopper"})
+CREATE (victor:Usuario {nome: "Victor"})
+
+CREATE (heartstopper)<-[:ASSISTIU]-(victor)
+
+CREATE (wonka:Filme {titulo: "Wonka"})
+CREATE (paulKing:Produtor {nome: "Paul King"})
+
+CREATE (wonka)-[:DIRIGIDO_POR]->(paulKing)
+
+CREATE (amelia:Usuario {nome: "Amélia"})
+
+CREATE (wonka)<-[:ASSISTIU]-(amelia)
+
+CREATE (prisonBreak:Serie {titulo: "Prison Break"})
+CREATE (wentworthMiller:Ator {nome: "Wentworth Miller"})
+
+CREATE (prisonBreak)-[:ATUOU_EM]->(wentworthMiller)
+
+CREATE (godzillaVsKong:Filme {titulo: "Godzilla VS Kong"})
+CREATE (dwayneJohnson:Ator {nome: "Dwayne Johnson"})
+
+CREATE (godzillaVsKong)-[:ATUOU_EM]->(dwayneJohnson)
+
+CREATE (outerBanks)-[:GENERO_DE]->(:Genero {nome: "Aventura/Mistério"})
+CREATE (prisonBreak)-[:GENERO_DE]->(:Genero {nome: "Suspense/Crime"})
+
+CREATE (outerBanks)<-[:ASSISTIU]-(pedro:Usuario {nome: "Pedro"})
+CREATE (theFabulous:Serie {titulo: "The Fabulous"})
+
+CREATE (theFabulous)<-[:ASSISTIU]-(pedro)
+
+CREATE (sadman:Serie {titulo: "Sadman"})
+
+CREATE (sadman)<-[:ASSISTIU]-(andre)
+
+CREATE (round6:Serie {titulo: "Round 6"})
+
+CREATE (round6)<-[:ASSISTIU]-(rodrigo)
+
+CREATE (derryGirls:Serie {titulo: "Derry Girls"})
+
+CREATE (derryGirls)<-[:ASSISTIU]-(amelia)
+
+CREATE (outlander:Serie {titulo: "Outlander"})
+
+CREATE (outlander)<-[:ASSISTIU]-(daniel)
