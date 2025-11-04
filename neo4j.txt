@@ -104,3 +104,12 @@ CREATE (derryGirls)<-[:ASSISTIU]-(amelia)
 CREATE (outlander:Serie {titulo: "Outlander"})
 
 CREATE (outlander)<-[:ASSISTIU]-(daniel)
+
+
+
+
+
+
+
+
+
